@@ -27,6 +27,7 @@ body {
   color: transparent;
   background: linear-gradient(-45deg, var(--color-primary) -30%, transparent 80%), linear-gradient(45deg, var(--color-success) 20%, var(--color-danger) 80%), linear-gradient(-45deg, var(--color-info) 60%, var(--color-warning), var(--color-light));
   background-clip: text;
+  -webkit-background-clip: text;
   overflow: hidden;
   border-right: 4px solid var(--color-warning);
   white-space: nowrap;
