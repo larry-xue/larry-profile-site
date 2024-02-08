@@ -1,5 +1,6 @@
 #container {
   width: 100%;
+  min-width: 300px;
   display: flex;
   flex-direction: column;
 }
@@ -62,13 +63,15 @@
 }
 
 .header-bar-submenu a {
+  font-size: 16px;
   padding: 10px;
+  color: #888;
   background-color: #fff;
 }
 
 .header-bar-submenu a:hover {
-  background-color: rgba(123, 123, 124, 0.06);
   text-decoration: none;
+  color: black;
   transition: all 0.4s;
 }
 
