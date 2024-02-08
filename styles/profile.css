@@ -1,9 +1,7 @@
 #container {
   width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
-  background-color: rgb(243 244 246);
 }
 
 /* Header */
@@ -18,32 +16,80 @@
 }
 
 #container .header-bar {
+  position: relative;
+  right: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 20px;
 }
 
+.header-bar-icon {
+  position: absolute;
+  right: 0px;
+  opacity: 0;
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  padding: 6px;
+  position: relative;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.header-bar-icon:hover {
+  background-color: rgba(63, 63, 70, 0.1);
+  border-radius: 4px;
+  transition: all 0.8s;
+}
+
+.header-bar-icon-line {
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-dark-variant);
+  margin-bottom: 5px;
+}
+
+.header-bar-submenu {
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 6px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 40px;
+  z-index: 2;
+}
+
+.header-bar-submenu a {
+  padding: 10px;
+  background-color: #fff;
+}
+
+.header-bar-submenu a:hover {
+  background-color: rgba(123, 123, 124, 0.06);
+  text-decoration: none;
+  transition: all 0.4s;
+}
+
 .header-bar-title {
   /* animation: pulse 1s ease-in-out 3s infinite alternate; */
   /* animation-delay: 3s; */
   margin-left: 20px;
+  margin-right: 32px;
+  min-width: 200px;
 }
 
 .header-bar-title h1 {
   color: transparent;
-  background: linear-gradient(
-      -45deg,
+  background: linear-gradient(-45deg,
       var(--color-primary) -30%,
-      transparent 80%
-    ),
+      transparent 80%),
     linear-gradient(45deg, var(--color-success) 20%, var(--color-danger) 80%),
-    linear-gradient(
-      -45deg,
+    linear-gradient(-45deg,
       var(--color-info) 60%,
       var(--color-warning),
-      var(--color-light)
-    );
+      var(--color-light));
   background-clip: text;
   -webkit-background-clip: text;
   letter-spacing: 8px;
@@ -58,16 +104,19 @@
 }
 
 .header-bar .header-bar-nav {
+  position: absolute;
+  right: 32px;
   display: flex;
   gap: 16px;
   color: rgb(63 63 70);
   font-size: var(--font-size-large);
 }
 
-.header-bar-nav .nav-link {
+.nav-link {
   text-decoration: none;
   color: inherit;
 }
+
 .nav-link:hover {
   text-decoration: underline;
 }
@@ -81,6 +130,27 @@
 
 .main-content .section-wrapper {
   padding: 1.5rem 1.5rem;
+}
+
+/* Media query */
+@media (max-width: 1050px) {
+
+  /* TODO: use fadeIn and fadeOut animation */
+  #container .header-bar-nav {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+  }
+
+  #container .header-bar-icon {
+    opacity: 1;
+    transition: opacity 0.4s ease-in-out;
+  }
+  /* show submenu when hover */
+  #container .header-bar:hover .header-bar-submenu {
+    opacity: 1;
+    transition: all .4s ease-in-out;
+  }
 }
 
 /* Animation */
@@ -108,6 +178,7 @@
 
 /* The typewriter cursor effect */
 @keyframes blink-caret {
+
   from,
   to {
     border-color: transparent;
