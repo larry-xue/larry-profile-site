@@ -7,6 +7,8 @@
 
 /* Header */
 #container .header-wrapper {
+  position: fixed;
+  top: 0;
   width: 100%;
   padding: 12px 0;
 
@@ -129,6 +131,7 @@
   display: grid;
   grid-template-rows: 1fr;
   margin: 0 auto;
+  margin-top: 50px;
 }
 
 .main-content .section-wrapper {
