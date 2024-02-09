@@ -2,6 +2,16 @@ window.onload = () => {
   removeTypingAnimation(3500);
 };
 
+function toggleMenu() {
+  const submenu = document.querySelector(".header-bar-submenu");
+  console.log('first submenu = ', submenu.style);
+  if  (submenu && submenu.style.display === "flex") {
+    submenu.style.display = "none";
+  } else if (submenu) {
+    submenu.style.display = "flex";
+  }
+}
+
 /**
  * Remove typing animation
  * @param {number} timeout - timeout in milliseconds
