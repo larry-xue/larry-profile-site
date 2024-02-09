@@ -14,12 +14,13 @@
     <title>Larry's Profile</title>
     <link rel="stylesheet" href="styles/main.css" />
     <link rel="stylesheet" href="styles/profile.css" />
+    <link rel="stylesheet" href="styles/print.css" />
     <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
   </head>
 
   <body>
     <div id="container">
-      <div class="header-wrapper">
+      <div class="header-wrapper not-print">
         <header class="header-bar">
           <div class="header-bar-title">
             <h1 class="typing">Larry Xue's Profile</h1>
@@ -32,10 +33,18 @@
               target="_blank"
             >
               <img
-                src="images/github-mark.svg"
+                src="images/github-mark.png"
                 width="20"
                 height="20"
                 alt="larry-xue's github"
+              />
+            </a>
+            <a href="#" alt="download profile" onclick="window.print()">
+              <img
+                src="images/download-icon.png"
+                width="20"
+                height="20"
+                alt="download profile"
               />
             </a>
             <a class="nav-link" href="#professional-experience"> Experience </a>
@@ -55,6 +64,7 @@
               target="_blank"
               >Github</a
             >
+            <a class="nav-link" href="#" alt="download profile" onclick="window.print()">Download</a>
             <a class="nav-link" href="#professional-experience"> Experience </a>
             <a class="nav-link" href="#education"> Education </a>
             <a class="nav-link" href="#skills"> Skills </a>
@@ -64,6 +74,47 @@
       </div>
       <main class="main-content">
         <section class="section-wrapper">
+          <h2>Yujian(Larry) Xue</h2>
+          <div style="line-height: 32px">
+            <strong>larryxue0311@gmail.com</strong>
+            |
+            <a
+              class="nav-link-no-hover"
+              href="https://github.com/larry-xue"
+              target="_blank"
+            >
+              <img
+                src="images/github-mark.png"
+                width="14"
+                height="14"
+                alt="larry-xue's github"
+              />
+            </a>
+            |
+            <a
+              class="nav-link-no-hover"
+              href="https://www.linkedin.com/in/yujay-xue-588386212/"
+              target="_blank"
+            >
+              <img
+                src="images/linkedin.png"
+                width="14"
+                alt="larry-xue's linkedin"
+              />
+              |
+              <a
+              class="nav-link-no-hover"
+              href="https://larryxue.dev"
+              target="_blank"
+            >
+              <img
+                src="images/favicon.ico"
+                width="14"
+                height="14"
+                alt="larry-xue's website"
+              />
+            </a>
+          </div>
           A results-driven Front-End Developer with over
           <strong>2 years of experience</strong>, specializing in web
           application development, Vue.js, Next.js, Nest.js and TypeScript.

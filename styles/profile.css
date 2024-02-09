@@ -5,6 +5,10 @@
   flex-direction: column;
 }
 
+h2 {
+  margin: 8px 0 4px;
+}
+
 /* Header */
 #container .header-wrapper {
   width: 100%;
@@ -87,14 +91,18 @@
 
 .header-bar-title h1 {
   color: transparent;
-  background: linear-gradient(-45deg,
+  background: linear-gradient(
+      -45deg,
       var(--color-primary) -30%,
-      transparent 80%),
+      transparent 80%
+    ),
     linear-gradient(45deg, var(--color-success) 20%, var(--color-danger) 80%),
-    linear-gradient(-45deg,
+    linear-gradient(
+      -45deg,
       var(--color-info) 60%,
       var(--color-warning),
-      var(--color-light));
+      var(--color-light)
+    );
   background-clip: text;
   -webkit-background-clip: text;
   letter-spacing: 8px;
@@ -117,6 +125,11 @@
   font-size: var(--font-size-large);
 }
 
+.nav-link-no-hover {
+  text-decoration: none;
+  color: inherit;
+}
+
 .nav-link {
   text-decoration: none;
   color: inherit;
@@ -135,12 +148,11 @@
 }
 
 .main-content .section-wrapper {
-  padding: 0 1.5rem 1rem;
+  padding: 0 1.5rem;
 }
 
 /* Media query */
-@media (max-width: 1050px) {
-
+@media (max-width: 1200px) {
   /* TODO: use fadeIn and fadeOut animation */
   #container .header-bar-nav {
     opacity: 0;
@@ -156,7 +168,7 @@
   /* show submenu when hover */
   #container .header-bar:hover .header-bar-submenu {
     opacity: 1;
-    transition: all .4s ease-in-out;
+    transition: all 0.4s ease-in-out;
   }
 }
 
@@ -185,7 +197,6 @@
 
 /* The typewriter cursor effect */
 @keyframes blink-caret {
-
   from,
   to {
     border-color: transparent;
